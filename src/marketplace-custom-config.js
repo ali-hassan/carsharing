@@ -136,6 +136,14 @@ export const filters = [
           key: 'led',
           label: 'LED Lights',
         },
+        {
+          key: 'automatic',
+          label: 'Automatic Transmission',
+        },
+        {
+          key: 'manual',
+          label: 'Manual Transmission',
+        },
       ],
     },
   },

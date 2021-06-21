@@ -144,6 +144,10 @@ export const filters = [
           key: 'manual',
           label: 'Manual Transmission',
         },
+        {
+          key: 'steering',
+          label: 'Multimedia Steering',
+        },
       ],
     },
   },

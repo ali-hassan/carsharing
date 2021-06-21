@@ -7,6 +7,7 @@ import IconLogo from './IconLogo';
 import LogoImage from './saunatime-logo.png';
 import css from './Logo.css';
 
+
 const Logo = props => {
   const { className, format, ...rest } = props;
   const mobileClasses = classNames(css.logoMobile, className);

@@ -85,10 +85,12 @@ export const filters = [
       // Note: label is not added through the translation files
       // to make filter customizations a bit easier.
       options: [
-        { key: 'hybrid', label: 'Hybrid' },
-        { key: 'diesel', label: 'Diesel' },
-        { key: 'petrol', label: 'Petrol' },
-        { key: 'other', label: 'Other' },
+        { key: 'small_car', label: 'Small car' },
+        { key: 'compact_car', label: 'Compact car' },
+        { key: 'suv', label: 'SUV / off-road vehicle'},
+        { key: 'vans', label: 'Vans / minivans' },
+        { key: 'commercial', label: 'Commercial vehicle' },
+        { key: 'sports', label: 'Sports car' },
       ],
     },
   },

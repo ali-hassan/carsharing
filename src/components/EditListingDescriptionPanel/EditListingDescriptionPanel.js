@@ -5,7 +5,7 @@ import { FormattedMessage } from '../../util/reactIntl';
 import { ensureOwnListing } from '../../util/data';
 import { findOptionsForSelectFilter } from '../../util/search';
 import { LISTING_STATE_DRAFT } from '../../util/types';
-import { ListingLink } from '../../components';
+import { ListingLink, FieldSelect } from '../../components';
 import { EditListingDescriptionForm } from '../../forms';
 import config from '../../config';
 
@@ -41,6 +41,9 @@ const EditListingDescriptionPanel = props => {
   );
 
   const categoryOptions = findOptionsForSelectFilter('category', config.custom.filters);
+  const transmissionKey = 'transmission';
+  // const transmissionKey = publicData && publicData.transmission;
+  const transmissionOptions = findOptionsForSelectFilter('transmission', config.custom.filters);
   return (
     <div className={classes}>
       <h1 className={css.title}>{panelTitle}</h1>
@@ -66,6 +69,18 @@ const EditListingDescriptionPanel = props => {
         fetchErrors={errors}
         categories={categoryOptions}
       />
+      {/*<FieldSelect*/}
+        {/*className={css.features}*/}
+        {/*name={transmissionKey}*/}
+        {/*id={transmissionKey}*/}
+        {/*label={'Location type'}*/}
+      {/*>*/}
+        {/*{transmissionOptions.map(o => (*/}
+          {/*<option key={o.key} value={o.key}>*/}
+            {/*{o.label}*/}
+          {/*</option>*/}
+        {/*))}*/}
+      {/*</FieldSelect>*/}
     </div>
   );
 };

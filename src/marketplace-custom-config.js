@@ -95,6 +95,48 @@ export const filters = [
     },
   },
   {
+    id: 'transmission',
+    label: 'Transmission',
+    type: 'SelectSingleFilter',
+    group: 'secondary',
+    queryParamNames: ['pub_transmission'],
+    config: {
+      // "key" is the option you see in Flex Console.
+      // "label" is set here for the UI only.
+      // Note: label is not added through the translation files
+      // to make filter customizations a bit easier.
+      options: [
+        { key: 'select_transmission', label: 'Select Transmission' },
+        { key: 'automatic', label: 'Automatic' },
+        { key: 'manual', label: 'Manual' },
+      ],
+    },
+  },
+  {
+    id: 'horsepower',
+    label: 'horsepower',
+    type: 'SelectSingleFilter',
+    group: 'secondary',
+    queryParamNames: ['pub_horsepower '],
+    config: {
+      options: [
+        { key: '1_to_1000', label: '1 to 1000 Horsepower' },
+      ],
+    },
+  },
+  {
+    id: 'view',
+    label: 'View',
+    type: 'SelectSingleFilter',
+    group: 'secondary',
+    queryParamNames: ['pub_view'],
+    config: {
+      options: [
+        { key: '1_to_1000', label: '1 to 1000 Horsepower' },
+      ],
+    },
+  },
+  {
     id: 'amenities',
     label: 'Amenities',
     type: 'SelectMultipleFilter',

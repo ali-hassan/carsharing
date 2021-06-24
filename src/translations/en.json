@@ -149,6 +149,9 @@
   "EditListingDescriptionForm.transmissionLabel": "Add Transmission",
   "EditListingDescriptionForm.categoryPlaceholder": "Choose the type of your car…",
   "EditListingDescriptionForm.categoryRequired": "You need to select a category for your car.",
+
+  "EditListingDescriptionForm.transmissionPlaceholder": "Choose the type of transmission",
+  "EditListingDescriptionForm.transmissionRequired": "You need to select a transmission for your car.",
   "EditListingDescriptionForm.createListingDraftError": "Failed to create a draft listing. Please try again.",
   "EditListingDescriptionForm.description": "Describe your car",
   "EditListingDescriptionForm.descriptionPlaceholder": "How many people can fit at once? Does the car come with towels?",

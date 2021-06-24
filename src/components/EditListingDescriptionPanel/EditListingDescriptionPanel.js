@@ -49,14 +49,14 @@ const EditListingDescriptionPanel = props => {
       <h1 className={css.title}>{panelTitle}</h1>
       <EditListingDescriptionForm
         className={css.form}
-        initialValues={{ title, description, category: publicData.category }}
+        initialValues={{ title, description, category: publicData.category, transmission: publicData.transmission }}
         saveActionMsg={submitButtonText}
         onSubmit={values => {
-          const { title, description, category } = values;
+          const { title, description, category, transmission } = values;
           const updateValues = {
             title: title.trim(),
             description,
-            publicData: { category },
+            publicData: { category, transmission },
           };
 
           onSubmit(updateValues);
@@ -68,19 +68,8 @@ const EditListingDescriptionPanel = props => {
         updateInProgress={updateInProgress}
         fetchErrors={errors}
         categories={categoryOptions}
+        transmissions={transmissionOptions}
       />
-      {/*<FieldSelect*/}
-        {/*className={css.features}*/}
-        {/*name={transmissionKey}*/}
-        {/*id={transmissionKey}*/}
-        {/*label={'Location type'}*/}
-      {/*>*/}
-        {/*{transmissionOptions.map(o => (*/}
-          {/*<option key={o.key} value={o.key}>*/}
-            {/*{o.label}*/}
-          {/*</option>*/}
-        {/*))}*/}
-      {/*</FieldSelect>*/}
     </div>
   );
 };

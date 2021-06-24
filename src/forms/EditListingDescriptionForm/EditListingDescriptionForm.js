@@ -6,8 +6,9 @@ import { intlShape, injectIntl, FormattedMessage } from '../../util/reactIntl';
 import classNames from 'classnames';
 import { propTypes } from '../../util/types';
 import { maxLength, required, composeValidators } from '../../util/validators';
-import { Form, Button, FieldTextInput, FieldSelect } from '../../components';
+import { Form, Button, FieldTextInput } from '../../components';
 import CustomCategorySelectFieldMaybe from './CustomCategorySelectFieldMaybe';
+import CustomTransmissionSelectFieldMaybe from './CustomTransmissionSelectFieldMaybe';
 
 import css from './EditListingDescriptionForm.css';
 
@@ -19,6 +20,7 @@ const EditListingDescriptionFormComponent = props => (
     render={formRenderProps => {
       const {
         categories,
+        transmissions,
         className,
         disabled,
         ready,
@@ -113,6 +115,13 @@ const EditListingDescriptionFormComponent = props => (
             id="category"
             name="category"
             categories={categories}
+            intl={intl}
+          />
+
+          <CustomTransmissionSelectFieldMaybe
+            id="transmission"
+            name="transmission"
+            categories={transmissions}
             intl={intl}
           />
 

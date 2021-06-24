@@ -11,6 +11,8 @@ import CustomCategorySelectFieldMaybe from './CustomCategorySelectFieldMaybe';
 import CustomTransmissionSelectFieldMaybe from './CustomTransmissionSelectFieldMaybe';
 import CustomHorsepowerSelectFieldMaybe from './CustomHorsepowerSelectFieldMaybe';
 import CustomBrandSelectFieldMaybe from './CustomBrandSelectFieldMaybe';
+import CustomDoorSelectFieldMaybe from './CustomDoorSelectFieldMaybe';
+import CustomSeatSelectFieldMaybe from './CustomSeatSelectFieldMaybe';
 
 import css from './EditListingDescriptionForm.css';
 
@@ -25,6 +27,8 @@ const EditListingDescriptionFormComponent = props => (
         transmissions,
         horsepowers,
         brands,
+        doors,
+        seats,
         className,
         disabled,
         ready,
@@ -140,6 +144,20 @@ const EditListingDescriptionFormComponent = props => (
             id="brand"
             name="brand"
             brands={brands}
+            intl={intl}
+          />
+
+          <CustomSeatSelectFieldMaybe
+            id="seat"
+            name="seat"
+            brands={seats}
+            intl={intl}
+          />
+
+          <CustomDoorSelectFieldMaybe
+            id="door"
+            name="door"
+            brands={doors}
             intl={intl}
           />
 

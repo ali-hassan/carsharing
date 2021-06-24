@@ -152,7 +152,7 @@
   "EditListingDescriptionForm.categoryPlaceholder": "Choose the type of your car…",
   "EditListingDescriptionForm.brandPlaceholder": "Choose the type of your brand…",
   "EditListingDescriptionForm.categoryRequired": "You need to select a category for your car.",
-  "EditListingDescriptionForm.horsepowerRequired": "You need to select a horsepower for your car.",
+  "EditListingDescriptionForm.horsepowerRequired": "How much horsepower the car has?",
   "EditListingDescriptionForm.brandRequired": "You need to select a brand for your car.",
 
   "EditListingDescriptionForm.transmissionPlaceholder": "Choose the type of transmission",

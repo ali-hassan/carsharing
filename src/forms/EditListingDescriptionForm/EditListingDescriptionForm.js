@@ -10,6 +10,7 @@ import { Form, Button, FieldTextInput } from '../../components';
 import CustomCategorySelectFieldMaybe from './CustomCategorySelectFieldMaybe';
 import CustomTransmissionSelectFieldMaybe from './CustomTransmissionSelectFieldMaybe';
 import CustomHorsepowerSelectFieldMaybe from './CustomHorsepowerSelectFieldMaybe';
+import CustomBrandSelectFieldMaybe from './CustomBrandSelectFieldMaybe';
 
 import css from './EditListingDescriptionForm.css';
 
@@ -23,6 +24,7 @@ const EditListingDescriptionFormComponent = props => (
         categories,
         transmissions,
         horsepowers,
+        brands,
         className,
         disabled,
         ready,
@@ -131,6 +133,13 @@ const EditListingDescriptionFormComponent = props => (
             id="horsepower"
             name="horsepower"
             horsepowers={horsepowers}
+            intl={intl}
+          />
+
+          <CustomBrandSelectFieldMaybe
+            id="brand"
+            name="brand"
+            brands={brands}
             intl={intl}
           />
 

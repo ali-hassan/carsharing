@@ -13,6 +13,7 @@ import CustomHorsepowerSelectFieldMaybe from './CustomHorsepowerSelectFieldMaybe
 import CustomBrandSelectFieldMaybe from './CustomBrandSelectFieldMaybe';
 import CustomDoorSelectFieldMaybe from './CustomDoorSelectFieldMaybe';
 import CustomSeatSelectFieldMaybe from './CustomSeatSelectFieldMaybe';
+import CustomAgeSelectFieldMaybe from './CustomAgeSelectFieldMaybe';
 
 import css from './EditListingDescriptionForm.css';
 
@@ -28,6 +29,7 @@ const EditListingDescriptionFormComponent = props => (
         horsepowers,
         brands,
         doors,
+        ages,
         seats,
         className,
         disabled,
@@ -119,6 +121,16 @@ const EditListingDescriptionFormComponent = props => (
             validate={composeValidators(required(descriptionRequiredMessage))}
           />
 
+          <FieldTextInput
+            id="model"
+            name="model"
+            className={css.description}
+            type="textarea"
+            label={"Which vehicle model do you have ?"}
+            placeholder={"Enter vehicle model"}
+            validate={composeValidators(required("vehicle model is required"))}
+          />
+
           <CustomCategorySelectFieldMaybe
             id="category"
             name="category"
@@ -158,6 +170,13 @@ const EditListingDescriptionFormComponent = props => (
             id="door"
             name="door"
             brands={doors}
+            intl={intl}
+          />
+
+          <CustomAgeSelectFieldMaybe
+            id="age"
+            name="age"
+            brands={ages}
             intl={intl}
           />
 

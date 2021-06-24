@@ -49,20 +49,21 @@ const EditListingDescriptionPanel = props => {
   const brandsOptions = findOptionsForSelectFilter('brand', config.custom.filters);
   const doorsOptions = findOptionsForSelectFilter('door', config.custom.filters);
   const seatsOptions = findOptionsForSelectFilter('seat', config.custom.filters);
+  const agesOptions = findOptionsForSelectFilter('age', config.custom.filters);
 
   return (
     <div className={classes}>
       <h1 className={css.title}>{panelTitle}</h1>
       <EditListingDescriptionForm
         className={css.form}
-        initialValues={{ title, description, category: publicData.category, transmission: publicData.transmission, horsepower: publicData.horsepower, brand: publicData.brand, door: publicData.door, seat: publicData.seat }}
+        initialValues={{ title, description, category: publicData.category, transmission: publicData.transmission, horsepower: publicData.horsepower, brand: publicData.brand, door: publicData.door, seat: publicData.seat, age: publicData.age }}
         saveActionMsg={submitButtonText}
         onSubmit={values => {
-          const { title, description, category, transmission, horsepower, brand, seat, door } = values;
+          const { title, description, category, transmission, horsepower, brand, seat, door, age } = values;
           const updateValues = {
             title: title.trim(),
             description,
-            publicData: { category, transmission, horsepower, brand, seat, door },
+            publicData: { category, transmission, horsepower, brand, seat, door, age },
           };
 
           onSubmit(updateValues);
@@ -79,6 +80,7 @@ const EditListingDescriptionPanel = props => {
         brands={brandsOptions}
         seats={seatsOptions}
         doors={doorsOptions}
+        ages={agesOptions}
       />
     </div>
   );

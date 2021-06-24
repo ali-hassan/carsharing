@@ -5,7 +5,7 @@ import { FieldSelect } from '../../components';
 import css from './EditListingDescriptionForm.css';
 
 const CustomAgeSelectFieldMaybe = props => {
-  const { name, id, ages, intl } = props;
+  const { name, id, brands, intl } = props;
   const ageLabel = intl.formatMessage({
     id: 'EditListingDescriptionForm.ageLabel',
   });
@@ -17,7 +17,7 @@ const CustomAgeSelectFieldMaybe = props => {
       id: 'EditListingDescriptionForm.ageRequired',
     })
   );
-  return ages ? (
+  return brands ? (
     <FieldSelect
       className={css.age}
       name={name}
@@ -28,7 +28,7 @@ const CustomAgeSelectFieldMaybe = props => {
       <option disabled value="">
         {agePlaceholder}
       </option>
-      {ages.map(c => (
+      {brands.map(c => (
         <option key={c.key} value={c.key}>
           {c.label}
         </option>

@@ -47,8 +47,9 @@ const EditListingDescriptionPanel = props => {
   const transmissionOptions = findOptionsForSelectFilter('transmission', config.custom.filters);
   const horsepowerOptions = findOptionsForSelectFilter('horsepower', config.custom.filters);
   const brandsOptions = findOptionsForSelectFilter('brand', config.custom.filters);
-  const doorsOptions = findOptionsForSelectFilter('door', config.custom.filters);
+  const fuelOptions = findOptionsForSelectFilter('fuel', config.custom.filters);
   const seatsOptions = findOptionsForSelectFilter('seat', config.custom.filters);
+  const doorsOptions = findOptionsForSelectFilter('door', config.custom.filters);
   const agesOptions = findOptionsForSelectFilter('age', config.custom.filters);
 
   return (
@@ -56,14 +57,14 @@ const EditListingDescriptionPanel = props => {
       <h1 className={css.title}>{panelTitle}</h1>
       <EditListingDescriptionForm
         className={css.form}
-        initialValues={{ title, description, category: publicData.category, transmission: publicData.transmission, horsepower: publicData.horsepower, brand: publicData.brand, door: publicData.door, seat: publicData.seat, age: publicData.age }}
+        initialValues={{ title, description, category: publicData.category, transmission: publicData.transmission, horsepower: publicData.horsepower, brand: publicData.brand, fuel: publicData.fuel, seat: publicData.seat, door: publicData.door, age: publicData.age }}
         saveActionMsg={submitButtonText}
         onSubmit={values => {
-          const { title, description, category, transmission, horsepower, brand, seat, door, age } = values;
+          const { title, description, category, transmission, horsepower, brand, fuel, seat, door, age } = values;
           const updateValues = {
             title: title.trim(),
             description,
-            publicData: { category, transmission, horsepower, brand, seat, door, age },
+            publicData: { category, transmission, horsepower, brand, fuel, seat, door, age },
           };
 
           onSubmit(updateValues);
@@ -78,6 +79,7 @@ const EditListingDescriptionPanel = props => {
         transmissions={transmissionOptions}
         horsepowers={horsepowerOptions}
         brands={brandsOptions}
+        fuels={fuelOptions}
         seats={seatsOptions}
         doors={doorsOptions}
         ages={agesOptions}

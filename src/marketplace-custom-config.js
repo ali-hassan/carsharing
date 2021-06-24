@@ -113,6 +113,25 @@ export const filters = [
     },
   },
   {
+    id: 'fuel',
+    label: 'Fuel',
+    type: 'SelectSingleFilter',
+    group: 'secondary',
+    queryParamNames: ['pub_fuel'],
+    config: {
+      // "key" is the option you see in Flex Console.
+      // "label" is set here for the UI only.
+      // Note: label is not added through the translation files
+      // to make filter customizations a bit easier.
+      options: [
+        { key: 'diesel', label: 'Diesel' },
+        { key: 'petrol', label: 'Petrol' },
+        { key: 'hybrid', label: 'Hybrid' },
+        { key: 'electrical', label: 'Electrical' },
+      ],
+    },
+  },
+  {
     id: 'horsepower',
     label: 'Horsepower',
     type: 'SelectSingleFilter',
@@ -126,10 +145,10 @@ export const filters = [
   },
   {
     id: 'seat',
-    label: 'seat',
+    label: 'Seat',
     type: 'SelectSingleFilter',
     group: 'secondary',
-    queryParamNames: ['pub_seat'],
+    queryParamNames: ['pub_seats'],
     config: {
       options: [
         { key: '1', label: '1' },
@@ -147,10 +166,10 @@ export const filters = [
   },
   {
     id: 'door',
-    label: 'door',
+    label: 'Door',
     type: 'SelectSingleFilter',
     group: 'secondary',
-    queryParamNames: ['pub_door'],
+    queryParamNames: ['pub_doors'],
     config: {
       options: [
         { key: '1', label: '1' },
@@ -168,10 +187,10 @@ export const filters = [
   },
   {
     id: 'age',
-    label: 'age',
+    label: 'Age',
     type: 'SelectSingleFilter',
     group: 'secondary',
-    queryParamNames: ['pub_age'],
+    queryParamNames: ['pub_ages'],
     config: {
       options: [
         { key: '18', label: '18' },

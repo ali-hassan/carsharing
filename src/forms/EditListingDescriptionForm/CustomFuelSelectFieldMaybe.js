@@ -4,29 +4,29 @@ import { FieldSelect } from '../../components';
 
 import css from './EditListingDescriptionForm.css';
 
-const CustomSeatSelectFieldMaybe = props => {
+const CustomFuelSelectFieldMaybe = props => {
   const { name, id, brands, intl } = props;
-  const seatLabel = intl.formatMessage({
-    id: 'EditListingDescriptionForm.seatLabel',
+  const fuelLabel = intl.formatMessage({
+    id: 'EditListingDescriptionForm.fuelLabel',
   });
-  const seatPlaceholder = intl.formatMessage({
-    id: 'EditListingDescriptionForm.seatPlaceholder',
+  const fuelPlaceholder = intl.formatMessage({
+    id: 'EditListingDescriptionForm.fuelPlaceholder',
   });
-  const seatRequired = required(
+  const fuelRequired = required(
     intl.formatMessage({
-      id: 'EditListingDescriptionForm.seatRequired',
+      id: 'EditListingDescriptionForm.fuelRequired',
     })
   );
   return brands ? (
     <FieldSelect
-      className={css.seat}
+      className={css.fuel}
       name={name}
       id={id}
-      label={seatLabel}
-      validate={seatRequired}
+      label={fuelLabel}
+      validate={fuelRequired}
     >
       <option disabled value="">
-        {seatPlaceholder}
+        {fuelPlaceholder}
       </option>
       {brands.map(c => (
         <option key={c.key} value={c.key}>
@@ -37,4 +37,4 @@ const CustomSeatSelectFieldMaybe = props => {
   ) : null;
 };
 
-export default CustomSeatSelectFieldMaybe;
+export default CustomFuelSelectFieldMaybe;

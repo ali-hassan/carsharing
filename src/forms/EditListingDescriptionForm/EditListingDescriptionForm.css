@@ -58,6 +58,18 @@
 .horsepower {
   @apply --EditListingDescriptionForm_formMargins;
 }
+.seat {
+  @apply --EditListingDescriptionForm_formMargins;
+}
+.age {
+  @apply --EditListingDescriptionForm_formMargins;
+}
+.fuel {
+  @apply --EditListingDescriptionForm_formMargins;
+}
+.brand {
+  @apply --EditListingDescriptionForm_formMargins;
+}
 
 .submitButton {
   margin-top: auto;

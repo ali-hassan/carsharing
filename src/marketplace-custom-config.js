@@ -114,7 +114,7 @@ export const filters = [
   },
   {
     id: 'horsepower',
-    label: 'horsepower',
+    label: 'Horsepower',
     type: 'SelectSingleFilter',
     group: 'secondary',
     queryParamNames: ['pub_horsepower '],

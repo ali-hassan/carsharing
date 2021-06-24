@@ -9,6 +9,7 @@ import { maxLength, required, composeValidators } from '../../util/validators';
 import { Form, Button, FieldTextInput } from '../../components';
 import CustomCategorySelectFieldMaybe from './CustomCategorySelectFieldMaybe';
 import CustomTransmissionSelectFieldMaybe from './CustomTransmissionSelectFieldMaybe';
+import CustomHorsepowerSelectFieldMaybe from './CustomHorsepowerSelectFieldMaybe';
 
 import css from './EditListingDescriptionForm.css';
 
@@ -21,6 +22,7 @@ const EditListingDescriptionFormComponent = props => (
       const {
         categories,
         transmissions,
+        horsepowers,
         className,
         disabled,
         ready,
@@ -121,7 +123,14 @@ const EditListingDescriptionFormComponent = props => (
           <CustomTransmissionSelectFieldMaybe
             id="transmission"
             name="transmission"
-            categories={transmissions}
+            transmissions={transmissions}
+            intl={intl}
+          />
+
+          <CustomHorsepowerSelectFieldMaybe
+            id="horsepower"
+            name="horsepower"
+            horsepowers={horsepowers}
             intl={intl}
           />
 

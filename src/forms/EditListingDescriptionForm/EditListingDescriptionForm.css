@@ -52,6 +52,12 @@
 .category {
   @apply --EditListingDescriptionForm_formMargins;
 }
+.transmission {
+  @apply --EditListingDescriptionForm_formMargins;
+}
+.horsepower {
+  @apply --EditListingDescriptionForm_formMargins;
+}
 
 .submitButton {
   margin-top: auto;

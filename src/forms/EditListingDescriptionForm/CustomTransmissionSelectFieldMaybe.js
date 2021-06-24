@@ -5,7 +5,7 @@ import { FieldSelect } from '../../components';
 import css from './EditListingDescriptionForm.css';
 
 const CustomTransmissionSelectFieldMaybe = props => {
-  const { name, id, categories, intl } = props;
+  const { name, id, transmissions, intl } = props;
   const transmissionLabel = intl.formatMessage({
     id: 'EditListingDescriptionForm.transmissionLabel',
   });
@@ -17,7 +17,7 @@ const CustomTransmissionSelectFieldMaybe = props => {
       id: 'EditListingDescriptionForm.transmissionRequired',
     })
   );
-  return categories ? (
+  return transmissions ? (
     <FieldSelect
       className={css.transmission}
       name={name}
@@ -28,7 +28,7 @@ const CustomTransmissionSelectFieldMaybe = props => {
       <option disabled value="">
         {transmissionPlaceholder}
       </option>
-      {categories.map(c => (
+      {transmissions.map(c => (
         <option key={c.key} value={c.key}>
           {c.label}
         </option>

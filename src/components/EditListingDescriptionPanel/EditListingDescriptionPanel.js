@@ -41,22 +41,24 @@ const EditListingDescriptionPanel = props => {
   );
 
   const categoryOptions = findOptionsForSelectFilter('category', config.custom.filters);
-  const transmissionKey = 'transmission';
+  // const transmissionKey = 'transmission';
+  // const horsepowerKey = 'horsepower';
   // const transmissionKey = publicData && publicData.transmission;
   const transmissionOptions = findOptionsForSelectFilter('transmission', config.custom.filters);
+  const horsepowerOptions = findOptionsForSelectFilter('horsepower', config.custom.filters);
   return (
     <div className={classes}>
       <h1 className={css.title}>{panelTitle}</h1>
       <EditListingDescriptionForm
         className={css.form}
-        initialValues={{ title, description, category: publicData.category, transmission: publicData.transmission }}
+        initialValues={{ title, description, category: publicData.category, transmission: publicData.transmission, horsepower: publicData.horsepower }}
         saveActionMsg={submitButtonText}
         onSubmit={values => {
-          const { title, description, category, transmission } = values;
+          const { title, description, category, transmission, horsepower } = values;
           const updateValues = {
             title: title.trim(),
             description,
-            publicData: { category, transmission },
+            publicData: { category, transmission, horsepower },
           };
 
           onSubmit(updateValues);
@@ -69,6 +71,7 @@ const EditListingDescriptionPanel = props => {
         fetchErrors={errors}
         categories={categoryOptions}
         transmissions={transmissionOptions}
+        horsepowers={horsepowerOptions}
       />
     </div>
   );

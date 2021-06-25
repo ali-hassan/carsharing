@@ -70,6 +70,12 @@
 .brand {
   @apply --EditListingDescriptionForm_formMargins;
 }
+.color {
+  @apply --EditListingDescriptionForm_formMargins;
+}
+.milage {
+  @apply --EditListingDescriptionForm_formMargins;
+}
 
 .submitButton {
   margin-top: auto;

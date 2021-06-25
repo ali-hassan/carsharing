@@ -51,20 +51,23 @@ const EditListingDescriptionPanel = props => {
   const seatsOptions = findOptionsForSelectFilter('seat', config.custom.filters);
   const doorsOptions = findOptionsForSelectFilter('door', config.custom.filters);
   const agesOptions = findOptionsForSelectFilter('age', config.custom.filters);
+  const milageOptions = findOptionsForSelectFilter('milage', config.custom.filters);
+  const colorOptions = findOptionsForSelectFilter('color', config.custom.filters);
 
   return (
     <div className={classes}>
       <h1 className={css.title}>{panelTitle}</h1>
       <EditListingDescriptionForm
         className={css.form}
-        initialValues={{ title, description, category: publicData.category, transmission: publicData.transmission, horsepower: publicData.horsepower, brand: publicData.brand, fuel: publicData.fuel, seat: publicData.seat, door: publicData.door, age: publicData.age }}
+        initialValues={{ title, description, category: publicData.category, transmission: publicData.transmission, horsepower: publicData.horsepower, brand: publicData.brand, fuel: publicData.fuel,
+          seat: publicData.seat, door: publicData.door, age: publicData.age, color: publicData.color, milage: publicData.milage }}
         saveActionMsg={submitButtonText}
         onSubmit={values => {
-          const { title, description, category, transmission, horsepower, brand, fuel, seat, door, age } = values;
+          const { title, description, category, transmission, horsepower, brand, fuel, seat, door, age, color, milage } = values;
           const updateValues = {
             title: title.trim(),
             description,
-            publicData: { category, transmission, horsepower, brand, fuel, seat, door, age },
+            publicData: { category, transmission, horsepower, brand, fuel, seat, door, age, color, milage },
           };
 
           onSubmit(updateValues);
@@ -83,6 +86,8 @@ const EditListingDescriptionPanel = props => {
         seats={seatsOptions}
         doors={doorsOptions}
         ages={agesOptions}
+        colors={colorOptions}
+        milages={milageOptions}
       />
     </div>
   );

@@ -132,6 +132,55 @@ export const filters = [
     },
   },
   {
+    id: 'milage',
+    label: 'Milage',
+    type: 'SelectSingleFilter',
+    group: 'secondary',
+    queryParamNames: ['pub_milage'],
+    config: {
+      // "key" is the option you see in Flex Console.
+      // "label" is set here for the UI only.
+      // Note: label is not added through the translation files
+      // to make filter customizations a bit easier.
+      options: [
+        { key: '50', label: '50 KM' },
+        { key: '100', label: '100 KM' },
+        { key: '150', label: '150 KM' },
+        { key: '200', label: '200 KM' },
+        { key: '250', label: '250 KM' },
+        { key: '300', label: '300 KM' },
+        { key: '350', label: '350 KM' },
+        { key: '400', label: '400 KM' },
+        { key: '450', label: '450 KM' },
+        { key: '500', label: '500 KM' },
+      ],
+    },
+  },
+  {
+    id: 'color',
+    label: 'Color',
+    type: 'SelectSingleFilter',
+    group: 'secondary',
+    queryParamNames: ['pub_color'],
+    config: {
+      // "key" is the option you see in Flex Console.
+      // "label" is set here for the UI only.
+      // Note: label is not added through the translation files
+      // to make filter customizations a bit easier.
+      options: [
+        { key: 'blue', label: 'Blue' },
+        { key: 'white', label: 'White' },
+        { key: 'black', label: 'Black' },
+        { key: 'red', label: 'Red' },
+        { key: 'green', label: 'Green' },
+        { key: 'yellow', label: 'Yellow' },
+        { key: 'silver', label: 'Silver' },
+        { key: 'gold', label: 'Gold' },
+        { key: 'grey', label: 'Grey' },
+      ],
+    },
+  },
+  {
     id: 'horsepower',
     label: 'Horsepower',
     type: 'SelectSingleFilter',

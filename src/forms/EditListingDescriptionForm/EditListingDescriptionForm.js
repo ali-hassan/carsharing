@@ -15,6 +15,8 @@ import CustomFuelSelectFieldMaybe from './CustomFuelSelectFieldMaybe';
 import CustomDoorSelectFieldMaybe from './CustomDoorSelectFieldMaybe';
 import CustomSeatSelectFieldMaybe from './CustomSeatSelectFieldMaybe';
 import CustomAgeSelectFieldMaybe from './CustomAgeSelectFieldMaybe';
+import CustomColorSelectFieldMaybe from './CustomColorSelectFieldMaybe';
+import CustomMilageSelectFieldMaybe from './CustomMilageSelectFieldMaybe';
 
 import css from './EditListingDescriptionForm.css';
 
@@ -33,6 +35,8 @@ const EditListingDescriptionFormComponent = props => (
         seats,
         doors,
         ages,
+        colors,
+        milages,
         className,
         disabled,
         ready,
@@ -186,6 +190,20 @@ const EditListingDescriptionFormComponent = props => (
             id="age"
             name="age"
             brands={ages}
+            intl={intl}
+          />
+
+          <CustomColorSelectFieldMaybe
+            id="color"
+            name="color"
+            brands={colors}
+            intl={intl}
+          />
+
+          <CustomMilageSelectFieldMaybe
+            id="milage"
+            name="milage"
+            brands={milages}
             intl={intl}
           />
 

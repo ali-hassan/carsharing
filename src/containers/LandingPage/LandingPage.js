@@ -53,6 +53,7 @@ export const LandingPageComponent = props => {
         image: [schemaImage],
       }}
     >
+      {/*landing page*/}
       <LayoutSingleColumn>
         <LayoutWrapperTopbar>
           <TopbarContainer />

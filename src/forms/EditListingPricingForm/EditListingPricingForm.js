@@ -9,8 +9,10 @@ import { LINE_ITEM_NIGHT, LINE_ITEM_DAY, propTypes } from '../../util/types';
 import * as validators from '../../util/validators';
 import { formatMoney } from '../../util/currency';
 import { types as sdkTypes } from '../../util/sdkLoader';
-import { Button, Form, FieldCurrencyInput } from '../../components';
+import { findOptionsForSelectFilter } from '../../util/search';
+import {Button, Form, FieldCurrencyInput, FieldCheckboxGroup} from '../../components';
 import css from './EditListingPricingForm.css';
+import AdditionalSelectFieldMaybe from "./AdditionalSelectFieldMaybe";
 
 const { Money } = sdkTypes;
 
@@ -30,6 +32,7 @@ export const EditListingPricingFormComponent = props => (
         updated,
         updateInProgress,
         fetchErrors,
+        filterConfig,
       } = formRenderProps;
 
       const unitType = config.bookingUnitType;
@@ -76,6 +79,7 @@ export const EditListingPricingFormComponent = props => (
       const submitInProgress = updateInProgress;
       const submitDisabled = invalid || disabled || submitInProgress;
       const { updateListingError, showListingsError } = fetchErrors || {};
+      const options = findOptionsForSelectFilter('additional', filterConfig);
 
       return (
         <Form onSubmit={handleSubmit} className={classes}>
@@ -99,6 +103,38 @@ export const EditListingPricingFormComponent = props => (
             currencyConfig={config.currencyConfig}
             validate={priceValidators}
           />
+          <FieldCurrencyInput
+            id="price"
+            name="price"
+            className={css.priceInput}
+            autoFocus
+            label={"100 free KM package in euro"}
+            placeholder={pricePlaceholderMessage}
+            currencyConfig={config.currencyConfig}
+            validate={priceValidators}
+          />
+          <FieldCurrencyInput
+            id="price"
+            name="price"
+            className={css.priceInput}
+            autoFocus
+            label={"250 free KM package in euro"}
+            placeholder={pricePlaceholderMessage}
+            currencyConfig={config.currencyConfig}
+            validate={priceValidators}
+          />
+          <FieldCurrencyInput
+            id="price"
+            name="price"
+            className={css.priceInput}
+            autoFocus
+            label={"250 free KM package in euro"}
+            placeholder={pricePlaceholderMessage}
+            currencyConfig={config.currencyConfig}
+            validate={priceValidators}
+          />
+          {/*<FieldCheckboxGroup className={css.priceInput} id={"price"} name={"price"} options={options} />*/}
+
 
           <Button
             className={css.submitButton}
@@ -115,7 +151,7 @@ export const EditListingPricingFormComponent = props => (
   />
 );
 
-EditListingPricingFormComponent.defaultProps = { fetchErrors: null };
+EditListingPricingFormComponent.defaultProps = { fetchErrors: null, filterConfig: config.custom.filters, };
 
 EditListingPricingFormComponent.propTypes = {
   intl: intlShape.isRequired,
@@ -129,6 +165,7 @@ EditListingPricingFormComponent.propTypes = {
     showListingsError: propTypes.error,
     updateListingError: propTypes.error,
   }),
+  filterConfig: propTypes.filterConfig,
 };
 
 export default compose(injectIntl)(EditListingPricingFormComponent);

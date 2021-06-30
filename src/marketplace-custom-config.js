@@ -427,6 +427,25 @@ export const filters = [
     },
   },
   {
+    id: 'additional',
+    label: 'Additional',
+    type: 'SelectMultipleFilter',
+    group: 'secondary',
+    queryParamNames: ['pub_additional'],
+    config: {
+      // "key" is the option you see in Flex Console.
+      // "label" is set here for the UI only.
+      // Note: label is not added through the translation files
+      // to make filter customizations a bit easier.
+      searchMode: 'has_all',
+      options: [
+        { key: '100', label: '100 free KM package at 100 euro' },
+        { key: '250', label: '250 free KM package at 200 euro' },
+        { key: '500', label: '500 free KM package at 500 euro' },
+      ],
+    },
+  },
+  {
     id: 'amenities',
     label: 'Amenities',
     type: 'SelectMultipleFilter',

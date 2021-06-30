@@ -17,7 +17,9 @@
 .error {
   color: var(--failColor);
 }
-
+.horsepower {
+  @apply --EditListingDescriptionForm_formMargins;
+}
 .priceInput {
   flex-shrink: 0;
   width: 100%;

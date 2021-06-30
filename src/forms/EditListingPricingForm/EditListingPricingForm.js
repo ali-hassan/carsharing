@@ -103,9 +103,10 @@ export const EditListingPricingFormComponent = props => (
             currencyConfig={config.currencyConfig}
             validate={priceValidators}
           />
+          <br/>
           <FieldCurrencyInput
-            id="price"
-            name="price"
+            id="package-100"
+            name="package-100"
             className={css.priceInput}
             autoFocus
             label={"100 free KM package in euro"}
@@ -113,9 +114,10 @@ export const EditListingPricingFormComponent = props => (
             currencyConfig={config.currencyConfig}
             validate={priceValidators}
           />
+          <br/>
           <FieldCurrencyInput
-            id="price"
-            name="price"
+            id="package-250"
+            name="package-250"
             className={css.priceInput}
             autoFocus
             label={"250 free KM package in euro"}
@@ -123,9 +125,10 @@ export const EditListingPricingFormComponent = props => (
             currencyConfig={config.currencyConfig}
             validate={priceValidators}
           />
+          <br/>
           <FieldCurrencyInput
-            id="price"
-            name="price"
+            id="package-500"
+            name="package-500"
             className={css.priceInput}
             autoFocus
             label={"250 free KM package in euro"}
